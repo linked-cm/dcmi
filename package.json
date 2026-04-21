@@ -1,0 +1,55 @@
+{
+  "name": "@_linked/dcmi",
+  "license": "UNLICENSED",
+  "version": "1.0.2",
+  "lincd": true,
+  "author": {
+    "name": "Valentine Wilson",
+    "url": "https://github.com/DiggidyDev",
+    "email": "valentinewilson@gmail.com"
+  },
+  "main": "lib/cjs/index.js",
+  "description": "This module is an up-to-date specification of all metadata terms maintained by the Dublin Core Metadata Initiative, including properties, vocabulary encoding schemes, syntax encoding schemes, and classes.",
+  "scripts": {
+    "start": "npm exec lincd dev",
+    "build": "yarn lincd build",
+    "prepublishOnly": "yarn lincd build production",
+    "postpublish": "npm exec lincd register"
+  },
+  "types": "dist/lincd-dcmi.d.ts",
+  "dependencies": {
+    "@_linked/core": "^2.0.1",
+    "@_linked/xsd": "~1.0"
+  },
+  "devDependencies": {
+    "lincd-cli": "^1.2",
+    "tsconfig-to-dual-package": "^1.2.0",
+    "typescript": "^5.7.3",
+    "typescript-plugin-css-modules": "^5.1.0"
+  },
+  "module": "lib/esm/index.js",
+  "exports": {
+    ".": {
+      "types": "./lib/esm/index.d.ts",
+      "import": "./lib/esm/index.js",
+      "require": "./lib/cjs/index.js"
+    },
+    "./*.js": {
+      "types": "./lib/esm/*.d.ts",
+      "import": "./lib/esm/*.js",
+      "require": "./lib/cjs/*.js"
+    },
+    "./*": {
+      "types": "./lib/esm/*.d.ts",
+      "import": "./lib/esm/*.js",
+      "require": "./lib/cjs/*.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "lib/esm/*"
+      ]
+    }
+  }
+}
