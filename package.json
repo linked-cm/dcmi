@@ -2,7 +2,7 @@
   "name": "@_linked/dcmi",
   "license": "UNLICENSED",
   "version": "1.0.2",
-  "lincd": true,
+  "linkedPackage": true,
   "author": {
     "name": "Valentine Wilson",
     "url": "https://github.com/DiggidyDev",
@@ -11,10 +11,10 @@
   "main": "lib/cjs/index.js",
   "description": "This module is an up-to-date specification of all metadata terms maintained by the Dublin Core Metadata Initiative, including properties, vocabulary encoding schemes, syntax encoding schemes, and classes.",
   "scripts": {
-    "start": "npm exec lincd dev",
-    "build": "yarn lincd build",
-    "prepublishOnly": "yarn lincd build production",
-    "postpublish": "npm exec lincd register"
+    "start": "npm exec linked dev",
+    "build": "yarn linked build",
+    "prepublishOnly": "yarn linked build production",
+    "postpublish": "npm exec linked register"
   },
   "types": "dist/lincd-dcmi.d.ts",
   "dependencies": {
@@ -22,7 +22,7 @@
     "@_linked/xsd": "~1.0"
   },
   "devDependencies": {
-    "lincd-cli": "^1.2",
+    "@_linked/cli": "^1.2",
     "tsconfig-to-dual-package": "^1.2.0",
     "typescript": "^5.7.3",
     "typescript-plugin-css-modules": "^5.1.0"
