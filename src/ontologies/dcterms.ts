@@ -5,9 +5,6 @@ import * as _this from './dcterms.js';
 
 const dataFile = '../data/dcterms.json';
 export const loadData = () => {
-  if (typeof module !== 'undefined' && typeof exports !== 'undefined') {
-    return import('../data/dcterms.json');
-  }
   //@ts-ignore
   return import('../data/dcterms.json', { with: { type: 'json' } }).then(
     (data) => data.default
