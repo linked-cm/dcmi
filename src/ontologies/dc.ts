@@ -5,9 +5,6 @@ import * as _this from './dc.js';
 
 const dataFile = '../data/dcelems.json';
 export const loadData = () => {
-  if (typeof module !== 'undefined' && typeof exports !== 'undefined') {
-    return import('../data/dcelems.json');
-  }
   //@ts-ignore
   return import('../data/dcelems.json', { with: { type: 'json' } }).then(
     (data) => data.default

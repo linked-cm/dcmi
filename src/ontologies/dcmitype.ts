@@ -5,9 +5,6 @@ import * as _this from './dcmitype.js';
 
 const dataFile = '../data/dcmitype.json';
 export const loadData = () => {
-  if (typeof module !== 'undefined' && typeof exports !== 'undefined') {
-    return import('../data/dcmitype.json');
-  }
   //@ts-ignore
   return import('../data/dcmitype.json', { with: { type: 'json' } }).then(
     (data) => data.default
