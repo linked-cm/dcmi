@@ -1,7 +1,7 @@
 {
   "name": "@_linked/dcmi",
   "license": "UNLICENSED",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "linkedPackage": true,
   "type": "module",
   "author": {
