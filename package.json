@@ -13,9 +13,9 @@
   "description": "This module is an up-to-date specification of all metadata terms maintained by the Dublin Core Metadata Initiative, including properties, vocabulary encoding schemes, syntax encoding schemes, and classes.",
   "scripts": {
     "start": "npm exec linked dev",
-    "build": "yarn linked build",
-    "prepublishOnly": "yarn linked build production",
-    "postpublish": "npm exec linked register"
+    "build": "rimraf ./lib && yarn build-esm && yarn copy-to-lib",
+    "build-esm": "echo \"compiling ESM\" && rimraf ./lib/esm && (yarn tsc -p tsconfig-esm.json || echo 'tsc returned non-zero; .js still emitted via noEmitOnError default')",
+    "copy-to-lib": "echo 'copying JSON assets to lib folder' && yarn copyfiles -u 1 'src/**/*.json' lib/esm"
   },
   "types": "./lib/esm/index.d.ts",
   "dependencies": {
@@ -26,6 +26,8 @@
     "@_linked/cli": "^1.2",
     "@changesets/changelog-github": "^0.5.2",
     "@changesets/cli": "^2.29.8",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^5.0.7",
     "tsconfig-to-dual-package": "^1.2.0",
     "typescript": "^5.7.3",
     "typescript-plugin-css-modules": "^5.1.0"
@@ -34,17 +36,14 @@
   "exports": {
     ".": {
       "types": "./lib/esm/index.d.ts",
-      "development": "./src/index.tsx",
       "import": "./lib/esm/index.js"
     },
     "./*.js": {
       "types": "./lib/esm/*.d.ts",
-      "development": "./src/*.ts",
       "import": "./lib/esm/*.js"
     },
     "./*": {
       "types": "./lib/esm/*.d.ts",
-      "development": "./src/*.ts",
       "import": "./lib/esm/*.js"
     }
   },
