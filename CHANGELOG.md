@@ -1,5 +1,11 @@
 # @\_linked/dcmi
 
+## 1.1.0
+
+### Minor Changes
+
+- [`0ceffd6`](https://github.com/linked-cm/dcmi/commit/0ceffd6b2182c7b3d1485e8a2f85fba29ba2dfe7) - ESM-only. Dropped the CommonJS build; ships ES modules only (`type: module`, no `require` export condition, no `lib/cjs`). Fixed the root `types` field. CJS consumers on Node 22+ can `require()` it (sync ESM) or use dynamic `import()`.
+
 ## 1.0.4
 
 ### Patch Changes
