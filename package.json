@@ -1,7 +1,7 @@
 {
   "name": "@_linked/dcmi",
   "license": "UNLICENSED",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "linkedPackage": true,
   "type": "module",
   "author": {
@@ -20,7 +20,7 @@
   "types": "./lib/esm/index.d.ts",
   "dependencies": {
     "@_linked/core": "^2.0.1",
-    "@_linked/xsd": "~1.0"
+    "@_linked/xsd": "^1.0"
   },
   "devDependencies": {
     "@_linked/cli": "^1.2",
