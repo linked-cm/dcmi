@@ -1,5 +1,11 @@
 # @\_linked/dcmi
 
+## 1.3.1
+
+### Patch Changes
+
+- [#22](https://github.com/linked-fw/dcmi/pull/22) [`8f2dbef`](https://github.com/linked-fw/dcmi/commit/8f2dbef50ee56718d53245b82f1a8c00ef559422) Thanks [@flyon](https://github.com/flyon)! - Sourcemaps now embed their TypeScript source, so consumers no longer see 'points to missing source files' warnings.
+
 ## 1.3.0
 
 ### Minor Changes
