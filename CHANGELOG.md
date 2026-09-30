@@ -1,5 +1,11 @@
 # @\_linked/dcmi
 
+## 1.3.2
+
+### Patch Changes
+
+- [#30](https://github.com/linked-fw/dcmi/pull/30) [`746ff06`](https://github.com/linked-fw/dcmi/commit/746ff060b581fe9ac619f6fa018dc391456b4aa5) Thanks [@flyon](https://github.com/flyon)! - Add `shapes/index`, a side-effect-only module that registers every shape this package defines, and have the package entry import it instead of listing shapes one by one. Hosts and consumers can now load `@_linked/dcmi/shapes/index` to get the package's full shape set registered without pulling in anything else, and a shape added later is picked up by the entry automatically.
+
 ## 1.3.1
 
 ### Patch Changes
