@@ -1,5 +1,11 @@
 # @\_linked/dcmi
 
+## 1.3.3
+
+### Patch Changes
+
+- [#37](https://github.com/linked-fw/dcmi/pull/37) [`647c771`](https://github.com/linked-fw/dcmi/commit/647c7713c461b1f0ad62b7c4165bf64830686adf) Thanks [@flyon](https://github.com/flyon)! - Publish only the files consumers need; the tarball no longer includes `.changeset/`, `.gitattributes`, `.github/`, `renovate.json`, `test/` or tsconfig files.
+
 ## 1.3.2
 
 ### Patch Changes
