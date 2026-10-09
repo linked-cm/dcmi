@@ -1,5 +1,11 @@
 # @\_linked/dcmi
 
+## 1.3.4
+
+### Patch Changes
+
+- [#40](https://github.com/linked-fw/dcmi/pull/40) [`6fd8785`](https://github.com/linked-fw/dcmi/commit/6fd87859546cf706fae0d142952a09df7d75359c) Thanks [@flyon](https://github.com/flyon)! - Build with `linked build` instead of a hand-rolled `tsc` + `copyfiles` script, and drop the `rimraf`/`copyfiles` devDependencies. The published `lib/` output is unchanged. Declares `@types/node` as a devDependency, which the compile needs and previously only received transitively.
+
 ## 1.3.3
 
 ### Patch Changes

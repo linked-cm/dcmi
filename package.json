@@ -6,7 +6,7 @@
     "data",
     "CHANGELOG.md"
   ],
-  "version": "1.3.3",
+  "version": "1.3.4",
   "packageManager": "npm@12.2.0",
   "linkedPackage": true,
   "type": "module",
